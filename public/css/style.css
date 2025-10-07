@@ -1,0 +1,492 @@
+/*                                              EDIÇÃO GERAL                                                   */
+
+/*isto é a edição do "body", o corpo da página, com mínimas alterações de cor de fundo, letras e ajustes de margens; é o geral para todas as páginas.*/
+body{
+    color: white; /*cor do texto e SOMENTE do texto*/
+    background: linear-gradient(to bottom, orange, rgb(255, 25, 0), rgb(29,29,29)); /*Fundo com efeito gradiente, como se fosse um "fogo"*/
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /*"font-family" define as fontes de uma página, o qual pode ser adicionado quantas quiser através de downloads na internet.*/
+    height: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+/*div "topo", o contâiner no cabeçalho da página; é um quadrado que serve como configurador para outros recursos do site; é o geral para todas as páginas.*/
+.topo{
+    background-color: rgb(45, 45, 45); /*Cor do contâiner*/
+    box-sizing: border-box; /*ajuda na criação de um contâiner, classificando as suas especificações de comandos para manipular medidas.*/
+    padding: 15px; /*serve para expandir o tamanho da caixa externamente, mas não altera suas margens internas (o conteúdo).*/
+    position: fixed; /*fica fixo na posição em que estiver ajustada.*/
+    top: 0; /*ajuste de direção(topo da tela)*/
+    left: 0; /*ajuste de direção(cobrir a esquerda que tinha espaçamento)*/
+    display: flex; /*como o contâiner é mostrado e por quais comandos pode ser orientado (lef, rig, top, bot, etc)*/
+    width: 100%; /*a largura do contâiner.*/
+    z-index: 999;
+}
+
+/*      isso é a edição do icone "usuário" e seu texto      */
+a:link{
+    margin-top: 10px; /*dá um afastamento do topo da aba do navegador(texto e ícone)*/
+    text-indent: 20px; /*adiciona uma margem ao lado*/
+    text-decoration: none; /*remove a linha de baixo do texto*/
+}
+
+a p{
+    color: white; /*cor do texto*/
+    text-indent: 30px /*dá mais um afastamento do canto esquerdo da tela(texto)*/
+}
+
+/*      edição da "pesquisa", a barra de procura     */
+
+.pesquisa {
+  margin-left: 40px;
+  text-indent: 50px;
+  height: 50px;
+  margin-top: 15px;
+  width: 350px;
+  border-style: none;
+  border-radius: 30px;
+}
+
+.search-container {
+  position: relative;
+  width: 300px;
+}
+
+.sugestoes {
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  right: 0;
+  background: rgb(45, 45, 45);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.sugestoes li {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.sugestoes li:hover {
+  background-color: rgb(69, 69, 69);
+}
+
+/*      edição do "menu", suas configurações internas e personalização       */
+i.fa-bars{ 
+    color: white; /*cor do ícone e texto*/
+    font-size: 40px; /*tamanho do texto e ícone*/
+    position:absolute; /*posição absoluta=pode usar right,left,top,bottom*/
+    right: 45px;/*ajuste pela direita*/
+    top: 35px/*ajuste do topo*/
+}
+
+/* Ícone do menu */
+#menu-toggle {
+  cursor: pointer;
+  position: fixed;
+  z-index: 1001;
+}
+
+/* Menu lateral */
+#sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background-color: rgb(45, 45, 45);
+  color: white;
+  padding: 20px;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+  transform: translateX(100%); /* empurra para fora da tela */
+  display: none; /* invisível inicialmente */
+}
+
+/* Quando ativo, mostra e desliza */
+#sidebar.active {
+  transform: translateX(0);
+  display: block;
+}
+
+/* Botão de fechar */
+#close-btn {
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+/* Links do menu */
+#sidebar ul {
+  list-style: none;
+  padding: 60px 0 0 0;
+}
+
+#sidebar ul li {
+  margin: 20px 0;
+}
+
+#sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/*      Responsividade de tela                          */
+@media (max-width: 600px) {
+  a:link {
+    margin-top: 10px;
+    text-indent: 10px;
+  }
+
+  a p {
+    text-indent: 10px;
+    font-size: 16px;
+  }
+
+  .pesquisa {
+    width: 200px;
+    text-indent: 35px;
+    margin-left: 45px;
+    height: 40px;
+    margin-top: 20px;
+  }
+}
+
+/*      contâiner de anúncio inicial do slogan                              */
+.cont {
+    color: rgb(216, 143, 59);
+    text-align: center;
+    background-color: rgb(29, 29, 29);
+    box-sizing: border-box;
+    width: 90%;
+    max-width: 1000px;
+    position: relative;
+    margin: 200px auto auto;
+    border-radius: 50px;
+    padding: 30px;
+}
+
+/* texto "h1" do contêiner */
+.cont h1 {
+    font-size: 50px
+}
+
+/* linha de quebra do contêiner */
+.cont hr {
+    margin-bottom: 30px;
+    width: 50%;
+}
+
+/* texto geral do contêiner */
+.cont p {
+    padding: 15px;
+    font-size: 15px;
+}
+
+/*                                            FIM DA EDIÇÃO GERAL                                                */
+
+
+
+/*                          EDIÇÃO DA PÁGINA - "index.html"                                             */
+.prods{
+    text-align: center;
+    padding: 15px;
+    border-radius: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    background-color: rgb(69, 69, 69);
+    left: 0;
+    bottom: 0
+}
+
+.prods h1{
+    font-size: 40px
+}
+
+.corpo{
+    text-align: center;
+    box-sizing: border-box;
+    height: 900px;
+    background-color: rgb(29,29,29);
+    width: 90%;
+    position: relative;
+    top: 450px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fim{
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+  width: auto;
+  height: 190px;
+  background-color: rgb(45, 45, 45);
+  position: relative;
+}
+
+/*    contâiner do cardápio       */
+
+.corpo {
+  text-align: center;
+  box-sizing: border-box;
+  max-height: 900px;
+  background-color: rgb(29,29,29);
+  width: 90%;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.sugestoes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background-color: rgb(19, 19, 19);
+  border-radius: 10px;
+  width: 100%;
+  max-width: 250px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.03);
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 18px;
+  color:rgb(216, 143, 59);
+}
+
+.card p {
+  font-size: 14px;
+  color: white;
+}
+
+.card .preco {
+  font-weight: bold;
+  margin: 10px 0;
+  color: rgb(216, 143, 59);
+}
+
+.card button {
+  background-color: rgb(225, 136, 41);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card button:hover {
+  background-color: rgb(255, 147, 96);
+}
+
+/* Responsivo para celular */
+@media (max-width: 600px) {
+  .sugestoes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/*                          FIM DA EDIÇÃO DA PÁGINA - "index.html"                                      */
+
+
+
+/*                          EDIÇÃO DA PÁGINA - "cardapio.html"                                          */
+
+    .cardapio{
+   background-color: #0a0b0f;
+   
+   
+    }
+    .bebidas-e-acompanhamentos {
+  display: flex; /* Habilita o Flexbox */
+  flex-direction: column; /* Organiza os itens em uma coluna */
+   gap: 20px; /* Adiciona 20px de espaço entre as seções */
+   margin-top: 155px ;
+}
+
+    .espetos {
+  flex-grow: 1.5; /* Faz com que esta seção ocupe mais espaço */
+  max-width: 400px; /* Define um tamanho máximo para não crescer demais */
+    }
+
+    .espetos h2{
+      margin-left: 30px
+    }
+    .Texto{
+      text-align: center;
+      margin: 30px
+    }
+.bebidas, .Acompanhamentos {
+      flex-grow: 1; /* Faz com que estas seções ocupem menos espaço */
+  max-width: 400px;
+  
+ background-color: #232323;     /* quadrado cinza */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 250px;        /* largura opcional */
+  
+
+}
+.Compra {
+  background-color: #ffae00;     /* quadrado preto */
+
+  border-radius: 100px;        /* arredonda os cantos */
+}
+.bahqespetoCar{
+  
+    /* Apenas para garantir que a imagem não tenha um tamanho excessivo */
+  max-width: 400px;
+  margin: 30px;
+}
+  
+  
+
+
+    .Tricolor {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.beira-rio {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.Cidade-baixa {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.lançador {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.Farrapos {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.Moinhos {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.Guaiba {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.Chinelão {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+.Gurizinho {
+  background-color: #232323;     /* quadrado preto */
+  color: #fff;                /* texto branco */
+  border-radius: 12px;        /* arredonda os cantos */
+  padding: 16px;              /* espaço interno */
+  margin-bottom: 16px;        /* espaço entre os blocos */
+  max-width: 400px;           /* largura opcional */
+}
+  .cardapio {
+  display: flex; /* Habilita o Flexbox */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: flex-start; /* Alinha os itens ao topo */
+  gap: 20px; /* Adiciona um espaço entre as colunas */
+}
+/*                          FIM DA EDIÇÃO DA PÁGINA - "cardapio.html"                                   */
+
+/*                          EDIÇÃO DA PÁGINA - "usuario.html"                                           */
+
+.usuario {
+  max-width: 500px;
+  margin: auto;
+  margin-top: 150px;
+  margin-bottom: 25px;
+  position: relative;
+  padding: 20px;
+  background-color: #232323;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.usuario h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.form-usuario label {
+  display: block;
+  margin-top: 10px;
+  color: #fff;
+}
+
+.form-usuario input {
+  margin-left: 45px;
+  width: 75%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-usuario button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: rgb(216, 143, 59);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
