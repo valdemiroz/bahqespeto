@@ -29,11 +29,8 @@ Route::get('/pedido/sucesso', [PedidoController::class, 'sucesso'])->name('pedid
 
 Route::get('/cadastro', [RegisterController::class, 'create'])->name('register.form');
 Route::post('/cadastro', [RegisterController::class, 'store'])->name('register.store');
-
-
-// no topo já tem use... então só coloque abaixo das outras rotas:
 Route::get('/', function () {
-    return view('home'); // resources/views/home.blade.php
+    return view('home');
 })->name('home');
 
 // login
@@ -66,6 +63,7 @@ Route::post('/cardapio/adicionar', [CardapioController::class, 'adicionarCarrinh
 Route::get('/carrinho', [CarrinhoController::class, 'index'])->name('carrinho');
 Route::post('/carrinho/remover', [CarrinhoController::class, 'remover'])->name('carrinho.remover');
 Route::post('/carrinho/checkout', [CarrinhoController::class, 'checkout'])->name('carrinho.checkout');
+
 
 Route::get('/pagamento', [PagamentoController::class, 'show'])->name('pagamento');
 Route::post('/pagamento', [PagamentoController::class, 'confirmar'])->name('pagamento.confirmar');

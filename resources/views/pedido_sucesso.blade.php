@@ -84,16 +84,6 @@ $troco = session('troco', 0);
 <p><strong>Troco:</strong> R$ {{ number_format($troco,2,',','.') }}</p>
 @endif
 
-
-    {{-- Pagamento --}}
-    <div class="dados-cliente" style="margin-top: 20px;">
-        <p><strong>Forma de Pagamento:</strong> {{ $formaPagamento }}</p>
-        <p><strong>Valor Pago:</strong> R$ {{ number_format($valorPago, 2, ',', '.') }}</p>
-        @if($formaPagamento === 'dinheiro')
-            <p><strong>Troco:</strong> R$ {{ number_format($troco, 2, ',', '.') }}</p>
-        @endif
-    </div>
-
     {{-- Botões --}}
     <div class="botoes">
         <button onclick="window.print()">Imprimir Recibo</button><br><br>
