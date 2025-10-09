@@ -2,34 +2,24 @@
 
 Um sistema desenvolvido em **Laravel** com foco em simular a aplicação de uma página web no meio comercial, assim vendendo produtos, controlar pedidos e itens do cardápio, autenticar usuário, etc.  
 Este projeto foi criado como parte do curso Técnico em Informática para Internet, oferecido pela Faculdade & Escola técnica QI, aplicando os conceitos de infraestrutura lógica, sistemas web e banco de dados.
-
----
-
-## Índice
-- [Instalação](#️-instalação)
-- [Uso](#-uso)
-- [Tecnologias Utilizadas](#-tecnologias-utilizadas)
-- [Autores](#-autores)
-- [Sugestões](#-sugestões)
-
 ---
 
 ## Instalação
 
 ### Pré-requisitos
-- [PHP 8.1+](https://www.php.net/downloads)
-- [Composer](https://getcomposer.org/)
-- [MySQL ou MariaDB](https://www.mysql.com/)
-- [Node.js e NPM](https://nodejs.org/)
+-[PHP e Composer](# Run as administrator...
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'));
+- [MySQL ou MariaDB](https://www.apachefriends.org/pt_br/index.html);
+- [Node.js e NPM](https://nodejs.org/);
 
 ### Passos para rodar o projeto
 
-```bash
+```em PowerShell
 # Clone este repositório
-git clone https://github.com/seu-usuario/test.git
+git clone https://github.com/valdemiroz/bahqespeto.git
 
-# Acesse a pasta do projeto
-cd test
+# Acesse a pasta do projeto (digite o caminho, caso contrário, o código pode causar problemas)
+cd c:/(caminho geral da pasta)/bahqespeto.git
 
 # Instale as dependências do Laravel
 composer install
@@ -52,10 +42,8 @@ php artisan migrate
 # Inicie o servidor local
 php artisan serve
 
-#Acesse a partir do link que o terminal indicar. ele será mais ou menos assim:
-"http://localhost:8000/"
-
----
+#Acesse a partir do link que o terminal indicar. ele deve aparecer assim:
+"http://localhost:8000/" (Ctrl + Click do Mouse esq. para acesso rápido)
 ```
 ## Uso
 Alguns dos recursos principais que esta página realiza são:
@@ -73,9 +61,9 @@ Caso haja um conflito para abrir o projeto ou problemas dentro de tais arquivos 
 
 | Nome                            | Função        | Contato                                        |
 | ------------------------------- | ------------- | ---------------------------------------------- |
+| ChatGPT (IA)                    | Assistente    | [@google](https://chatgpt.com)                 |
 | Alisson Davi                    | Desenvolvedor | [@AlissonDavi](https://github.com/valdemiroz)  |
 | Matheus de Souza                | Desenvolvedor | [@MateusSouza]                                 |
-| ChatGPT (IA)                    | Assistente    | [@google](https://chatgpt.com)                 |
 | Jefferson                       | Desenvolvedor | [@Jefferson]                                   |
 | Leonardo Abadi                  | Desenvolvedor | [@LeoAbadi]                                    |
 | Agnaldo                         | Desenvolvedor | [@Agnaldo]                                     |
