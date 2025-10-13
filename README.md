@@ -8,10 +8,15 @@ Este projeto foi criado como parte do curso Técnico em Informática para Intern
 
 ### Pré-requisitos
 -[PHP e Composer] Copie o trecho a seguir:
+
 (# Powershell rodando em ADMIN:
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'));
+
 - [MySQL ou MariaDB](https://www.apachefriends.org/pt_br/index.html);
+
 - [Node.js e NPM](https://nodejs.org/);
+
+- [Git](https://git-scm.com/downloads/win);
 
 ### Passos para rodar o projeto
 
