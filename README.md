@@ -45,6 +45,8 @@ php artisan serve
 
 #Acesse a partir do link que o terminal indicar. ele deve aparecer assim:
 "http://localhost:8000/" (Ctrl + Click do Mouse esq. para acesso rápido)
+
+(não esqueça de ativar o MySQL para reconhecer os dados da página web)
 ```
 ## Uso
 Alguns dos recursos principais que esta página realiza são:
