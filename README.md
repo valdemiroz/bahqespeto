@@ -5,6 +5,7 @@ Este projeto foi criado como parte do curso Técnico em Informática para Intern
 ---
 
 ## Instalação
+Antes que você faça quaisquer passos da instalação, leia atenciosamente os Pré-requisitos e, após isso, vá ao passo a passo de instalar o projeto.
 
 ### Pré-requisitos
 -[PHP e Composer] Copie o trecho a seguir:
