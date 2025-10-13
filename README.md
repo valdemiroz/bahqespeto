@@ -31,11 +31,11 @@ cp .env.example .env
 # Gere a chave da aplicação
 php artisan key:generate
 
-# Configure o banco de dados no arquivo .env (insira estes dados)
+# Configure o banco de dados no arquivo .env (verifique o .env e remova as hashtags "#" para funcionar o servidor)
 # Exemplo:
-# DB_DATABASE=sistema_login
-# DB_USERNAME=root
-# DB_PASSWORD=
+DB_DATABASE=sistema_login
+DB_USERNAME=root
+DB_PASSWORD=
 
 # Rode as migrações
 php artisan migrate
