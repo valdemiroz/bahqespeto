@@ -10,8 +10,8 @@ Antes que fazer quaisquer passos da instalação, use o PowerShell no administra
 ### Pré-requisitos
 -[PHP e Composer] Copie o trecho entre parênteses a seguir:
 
-# Powershell rodando em ADMIN:
-Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4');
+(# Powershell rodando em ADMIN:
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'));
 
 - [MySQL ou MariaDB](https://www.apachefriends.org/pt_br/index.html);
 
