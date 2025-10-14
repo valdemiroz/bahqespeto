@@ -5,12 +5,12 @@ Este projeto foi criado como parte do curso Técnico em Informática para Intern
 ---
 
 ## Instalação
-Antes que você faça quaisquer passos da instalação, leia atenciosamente os Pré-requisitos e, após isso, vá ao passo a passo de instalar o projeto.
+Antes que fazer quaisquer passos da instalação, use o PowerShell no administrador, leia atenciosamente os Pré-requisitos e, após isso, vá ao passo a passo de instalar o projeto.
 
 ### Pré-requisitos
 -[PHP e Composer] Copie o trecho entre parênteses a seguir:
 
-(# Powershell rodando em ADMIN:
+#(# Powershell rodando em ADMIN:
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://php.new/install/windows/8.4'));
 
 - [MySQL ou MariaDB](https://www.apachefriends.org/pt_br/index.html);
